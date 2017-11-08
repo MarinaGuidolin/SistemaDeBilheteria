@@ -3,7 +3,7 @@ public class IngressoVIP {
 	
 	float ingressoVIPNormal= 31.9f;
 
-	public IngressoVIPNormal() {
+	public IngressoVIP() {
 		
 	}
 
