@@ -1,12 +1,4 @@
 import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.TextField;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.*;
 
 public class Frame1 extends JPanel{
 	
@@ -21,7 +13,7 @@ public class Frame1 extends JPanel{
 		label = new JLabel();
 		label.setToolTipText("Clique em 'comprar' para iniciar uma nova compra");
 		add(label);
-		
+
 		botaoIniciar = new JButton("Comprar");
 		botaoIniciar.setBounds(420, 350, 150, 100);
 		botaoIniciar.addActionListener(
