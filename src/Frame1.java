@@ -1,4 +1,7 @@
-import java.awt.Color;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Frame1 extends JPanel{
 	
@@ -20,7 +23,7 @@ public class Frame1 extends JPanel{
 		
 		new ActionListener() {
 
-			@Override
+
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				
@@ -41,7 +44,7 @@ public class Frame1 extends JPanel{
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		
-		g.setColor(Color.RED);
+		g.setColor(Color.MAGENTA);
 		g.setFont(new Font("Serif", Font.BOLD + Font.ITALIC, 60));
 		g.drawString("Sistema de bilheteria", 150, 200);
 		
