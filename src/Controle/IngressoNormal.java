@@ -1,5 +1,6 @@
+package Controle;
 
-public class IngressoNormal {
+public class IngressoNormal extends Ingresso {
 	
 	float valor = 26.90f;
 

@@ -1,3 +1,5 @@
+package Visao;
+
 import javax.swing.*;
 
 public class TelaInicial {

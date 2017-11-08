@@ -1,5 +1,6 @@
+package Controle;
 
-public class IngressoVIP {
+public class IngressoVIP extends Ingresso {
 	
 	float ingressoVIPNormal= 31.9f;
 

@@ -1,3 +1,6 @@
+package Controle;
+
+import Visao.TelaInicial;
 
 public class Main {
 
