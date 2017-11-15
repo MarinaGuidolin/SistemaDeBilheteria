@@ -2,17 +2,26 @@ package Controle;
 
 public class Ingresso3D extends Ingresso{
 
-    float ingresso3D = 36.9f;
+    float valor = 36.9f;
+    Filme filme;
+    Poltrona poltrona;
 
-    public Ingresso3D(){
+
+    public Ingresso3D(Filme filme, Poltrona poltrona){
+        this.filme = filme;
+        this.poltrona = poltrona;
     }
-
-    public float getAcrescimo3D() {
-        return ingresso3D;
+    @Override
+    public float getValor() {
+        return valor;
     }
-
-    public void setIngresso(float acrescimo3d) {
-        ingresso3D = acrescimo3d;
+    @Override
+    public int getPoltrona() {
+        return poltrona.getNumero();
+    }
+    @Override
+    public String getTipo(){
+        return "3D";
     }
 
 

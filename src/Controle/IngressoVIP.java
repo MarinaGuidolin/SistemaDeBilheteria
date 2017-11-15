@@ -2,20 +2,27 @@ package Controle;
 
 public class IngressoVIP extends Ingresso {
 	
-	float ingressoVIPNormal= 31.9f;
+	float valor = 31.9f;
+	Filme filme;
+	Poltrona poltrona;
 
-	public IngressoVIP() {
-		
-	}
 
-	public float getAcrescimoVIP() {
-		return ingressoVIPNormal;
+	public IngressoVIP(Filme filme, Poltrona poltrona){
+		this.filme = filme;
+		this.poltrona = poltrona;
 	}
-
-	public void setValor(float ingressoVIPNormal) {
-		this.ingressoVIPNormal= ingressoVIPNormal;
+	@Override
+	public float getValor() {
+		return valor;
 	}
-	
+	@Override
+	public int getPoltrona() {
+		return poltrona.getNumero();
+	}
+	@Override
+	public String getTipo(){
+		return "VIP";
+	}
 	
 
 }
