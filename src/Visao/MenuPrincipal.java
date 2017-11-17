@@ -1,6 +1,7 @@
 package Visao;
 
 import Controle.Filme;
+import Controle.Sala;
 
 import java.util.Scanner;
 
@@ -8,13 +9,15 @@ import java.util.Scanner;
  * Created by marin on 11/16/2017.
  */
 public class MenuPrincipal {
+    Scanner s = new Scanner(System.in);
     public void menuInicio() {
+
 
         int op = 0;
 
         while (op != 4) {
 
-            Scanner s = new Scanner(System.in);
+
 
             System.out.println("-------------------------------\n"
                     + "1. Comprar ingresso:\n"
@@ -25,26 +28,43 @@ public class MenuPrincipal {
                     + " Digite a opção: ");
 
             op = s.nextInt();
+            menuSelecao(op);
+
 
         }
     }
 
     public void menuSelecao(int op) {
+
+        MenuComprarIngresso mingresso = new MenuComprarIngresso();//cria um menu para comprar ingresso
+        Filme filme = mingresso.selecionarFilme();//primeiro metodo para comprar o ingresso=> selecionar o filme
+
+
         switch (op){
 
+
             case 1:
-                MenuComprarIngresso mingresso = new MenuComprarIngresso();//cria um menu para comprar ingresso
-                Filme filme = mingresso.selecionarFilme();//primeiro metodo para comprar o ingresso=> selecionar o filme
-                System.out.println("Digite o numero da poltrona escolhida:")
-                mingresso.selecionarPoltrona(filme);
+
+                boolean comprou = false;
+                while(comprou == false) {
+                    System.out.println("As poltronas disponiveis sao: " + mingresso.mostrarPoltronasDisponiveis(filme));//mostra as poltronas disponiveis
+                    System.out.println("Digite o numero da poltrona escolhida:");//pede o numero da poltrona a ser comprada
+                    int numeroPoltrona = s.nextInt();//pegar input do usuario
+
+                    comprou = filme.comprarPoltrona(numeroPoltrona); //verifica o numero da poltrona
+                    if (comprou == true) {
+                        System.out.println("Poltrona selecionada com sucesso!");
+                    }
+
+                }
                 break;
 
             case 2:
-                menuFilmes();
+
                 break;
 
             case 3:
-                menuAdmin();
+
                 break;
 
             case 4:

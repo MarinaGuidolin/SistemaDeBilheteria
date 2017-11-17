@@ -12,8 +12,7 @@ public class Filme {
     String legendado;
     String horario;
     String tipo;
-
-    public ArrayList<Integer> poltronas = new ArrayList<Integer>(); //array de poltronas
+    public int[] poltronas = new int[30]; //array de poltronas
 
     public Filme(String titulo, String horario, Sala sala, String tipo, int classificacao, String legendado){
         this.classificacao = classificacao;
@@ -42,27 +41,42 @@ public class Filme {
     public String getTipo(){
         return tipo;
     }
-
-    public int getTotalDePoltronas(){
-        return sala.getNumeroDePoltronas();
+    public int[] getPoltronas(){
+        return poltronas;
     }
-    public boolean adicionarPoltrona(int numeroPoltrona){
-        int capacidade = this.getTotalDePoltronas();
-        boolean adicionou = false;
-        if(poltronas.contains(numeroPoltrona) == false && poltronas.size() < capacidade)
-            adicionou = poltronas.add(numeroPoltrona);
-        return adicionou;
+
+    public boolean comprarPoltrona(int numeroPoltrona) {
+        int capacidade = poltronas.length;
+        boolean comprou = false;
+        if (poltronas[numeroPoltrona - 1] == 0 && numeroPoltrona <= capacidade){
+            poltronas[numeroPoltrona - 1] = 1;
+            comprou = true;
+            poltronasDisponiveis();
+        }
+        return comprou;
     }
     public boolean verificaSalaCheia(){
-        boolean cheia = false;
-        if(poltronas.size() == this.getTotalDePoltronas())
-            cheia = true;
+        boolean cheia = true;
+        for(int i: poltronas) {
+            if (i == 0) {
+                cheia = false;
+                break;
+            }
+        }
         return cheia;
     }
 
-    public ArrayList<Integer> showPoltronasDisponiveis(){
+    public ArrayList<Integer> poltronasDisponiveis(){
+        ArrayList<Integer> disponiveis = new ArrayList<Integer>();
 
+
+        for(int i = 0; i < this.getPoltronas().length; i++)
+            if(this.getPoltronas()[i] == 0)
+                disponiveis.add(i+1);
+
+        return disponiveis;
     }
 
-
 }
+
+

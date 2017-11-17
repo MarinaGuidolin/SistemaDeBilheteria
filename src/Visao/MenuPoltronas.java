@@ -16,7 +16,8 @@ public class MenuPoltronas {
         this.filme = filme;
     }
 
-    public ArrayList<Integer> mostrarPoltronasDisponiveis(){
-        filme.
+    public ArrayList<Integer> mostrarPoltronasDisponiveis() {
+        return filme.poltronasDisponiveis();
+
     }
 }
