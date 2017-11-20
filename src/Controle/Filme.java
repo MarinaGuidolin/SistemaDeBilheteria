@@ -6,6 +6,7 @@ import java.util.ArrayList;
  * Created by marina on 11/8/2017.
  */
 public class Filme {
+    int numeroDoFilme;
     int classificacao;
     Sala sala;
     String titulo;
@@ -14,14 +15,17 @@ public class Filme {
     String tipo;
     public int[] poltronas = new int[30]; //array de poltronas
 
-    public Filme(String titulo, String horario, Sala sala, String tipo, int classificacao, String legendado){
+    public Filme(int numeroDoFilme, String titulo, String horario, Sala sala, String tipo, int classificacao, String legendado){
         this.classificacao = classificacao;
         this.titulo = titulo;
         this.horario = horario;
         this.sala = sala;
         this.legendado = legendado;
+        this.numeroDoFilme = numeroDoFilme;
     }
-
+    public int getNumero(){
+        return numeroDoFilme;
+    }
     public String getTitulo(){
         return titulo;
     }
