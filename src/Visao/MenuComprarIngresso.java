@@ -16,9 +16,8 @@ public class MenuComprarIngresso {
     }
 
     public Filme selecionarFilme( int numeroFilme) {
-        ArrayList<Filme> filmes = database.getFilmes();
 
-        return filmes.get(numeroFilme - 1);
+        return database.getFilmes()[numeroFilme - 1];
 
     }
 
