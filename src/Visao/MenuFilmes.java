@@ -1,17 +1,23 @@
 package Visao;
 
+import Controle.Database;
 import Controle.Filme;
 import Controle.Sala;
+
+import javax.swing.*;
 
 /**
  * Created by marin on 11/16/2017.
  */
 public class MenuFilmes {
-    //exibir JFrames com os filmes adicionados pelo administrador
-    public Filme selecionarFilme(){
-        Sala sala1 = new Sala(1, 30);
-        Filme filme = new Filme(1,"titulo", "1h20",sala1, "normal", 12, "legendado" );
-        return filme;
-
+    Database data;
+    public MenuFilmes (Database database){
+        this.data = database;
     }
+    //exibir JFrames com os filmes adicionados pelo administrador
+    public JPanel visualizarFilme(){
+        JPanel janelaDeFilmes = new JPanel();
+        return janelaDeFilmes;
+    }
+
 }

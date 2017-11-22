@@ -71,11 +71,16 @@ public class MenuPrincipal {
                     if (comprou == true) {
                         System.out.println("Poltrona selecionada com sucesso!");
                     }
+                    else
+                        System.out.println("Escolha uma poltrona disponível");
 
                 }
                 break;
 
             case 2:
+               MenuFilmes mfilmes = new MenuFilmes(database);
+
+
 
                 break;
 
@@ -89,7 +94,6 @@ public class MenuPrincipal {
 
             default:
                 System.out.println("Opção invalida");
-
 
         }
 

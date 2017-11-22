@@ -7,16 +7,14 @@ import java.util.ArrayList;
  */
 public class Sala {
 
-    int numeroPoltronas;
+
     int numeroSala;
-    public Sala(int numeroPoltronas, int numeroSala){
-        this.numeroPoltronas = numeroPoltronas;
+    public Sala( int numeroSala){
+
         this.numeroSala = numeroSala;
     }
 
-    public int getNumeroDePoltronas() {
-        return numeroPoltronas;
-    }
+
 
     public int getNumeroDaSala(){
         return numeroSala;

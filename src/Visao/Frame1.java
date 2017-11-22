@@ -1,5 +1,7 @@
 package Visao;
 
+import Controle.Main;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -29,7 +31,7 @@ public class Frame1 extends JPanel{
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				
-				Frame2 janela2 = new Frame2();
+				Main.Frame2 janela2 = new Main.Frame2();
 				janela2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				janela2.setSize(1000, 700);
 				janela2.setVisible(true);
