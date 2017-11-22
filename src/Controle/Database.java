@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Database {
 
-    Filme[] filmes = new Filme[3];
+    Filme[] filmes = new Filme[10];
 
     public Database() {
         Sala sala3D = new Sala( 1);

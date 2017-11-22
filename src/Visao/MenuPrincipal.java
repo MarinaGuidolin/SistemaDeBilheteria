@@ -4,6 +4,7 @@ import Controle.Database;
 import Controle.Filme;
 import Controle.Sala;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 /**
@@ -22,17 +23,19 @@ public class MenuPrincipal {
 
         while (op != 4) {
 
-
-
-            System.out.println("-------------------------------\n"
+            JFrame menuInicial = new JFrame("Menu Inicial");
+            String opcaoMenu = JOptionPane.showInputDialog("-------------------------------\n"
                     + "1. Comprar ingresso:\n"
                     + "2. Ver Filmes e horários\n"
                     + "3. Entrar como Admnistrador\n"
                     + "4. Sair\n"
                     + "-------------------------------\n"
-                    + " Digite a opção: ");
+                    + " Digite a opção desejada: "
+            );
+            op = Integer.parseInt(opcaoMenu);
 
-            op = s.nextInt();
+
+
             menuSelecao(op);
 
 
@@ -51,6 +54,7 @@ public class MenuPrincipal {
                 boolean comprou = false;
                 while(comprou == false) {
                     MenuComprarIngresso mingresso = new MenuComprarIngresso(database);//cria um menu para comprar ingresso
+                    mingresso.visualizarFilmes();
                     System.out.println("digite o numero do filme: ");
                     int numeroFilme = s.nextInt();
                     System.out.println("numero do filme "+ numeroFilme);

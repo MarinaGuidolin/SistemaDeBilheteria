@@ -1,5 +1,6 @@
 package Controle;
 
+import Visao.Frame2;
 import Visao.MenuPrincipal;
 
 import javax.swing.*;
@@ -8,6 +9,7 @@ import java.awt.*;
 public class Main {
 
 	public static void main(String[] args) {
+
 
 		MenuPrincipal menu = new MenuPrincipal();
 		menu.menuInicio();
@@ -29,37 +31,5 @@ public class Main {
 
 	}
 
-	public static class Frame2 extends JFrame {
 
-        private JTextField textoEscolha;
-        private JButton botaoAvancar;
-        private JButton botaoVoltar;
-        private BorderLayout border_Layout;
-
-        public Frame2() {
-            super();
-            setLayout(null);
-
-            textoEscolha = new JTextField("Escolha um filme:", 20);
-            textoEscolha.setBounds(420, 0, 120, 20);
-            textoEscolha.setEditable(false);
-            add(textoEscolha);
-
-            botaoAvancar = new JButton("Avançar");
-            border_Layout = new BorderLayout();
-            setLayout(border_Layout);
-            add(botaoAvancar, BorderLayout.SOUTH);
-
-            botaoVoltar = new JButton("Voltar");
-            add(botaoVoltar, BorderLayout.SOUTH);
-
-
-
-
-        }
-
-
-
-
-    }
 }

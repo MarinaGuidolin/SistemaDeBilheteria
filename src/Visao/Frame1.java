@@ -13,7 +13,7 @@ public class Frame1 extends JPanel{
 	private JButton botaoIniciar;
 	private JTextField texto;
 	
-	public Frame1() {
+	/*public Frame1() {
 		super();
 		
 		setLayout(null);
@@ -53,7 +53,6 @@ public class Frame1 extends JPanel{
 		g.drawString("Sistema de bilheteria", 150, 200);
 		
 	}
-	
-	
+	*/
 
 }

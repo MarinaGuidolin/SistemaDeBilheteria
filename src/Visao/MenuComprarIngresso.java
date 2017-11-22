@@ -16,9 +16,9 @@ public class MenuComprarIngresso {
 
         this.database = database;
     }
-    public JPanel visualizarFilmes(){
-        JPanel janelaDeFilmes = new JPanel();
-        return janelaDeFilmes;
+    public void visualizarFilmes(){
+        Frame2 janela = new Frame2();
+
     }
 
     public Filme selecionarFilme( int numeroFilme) {
