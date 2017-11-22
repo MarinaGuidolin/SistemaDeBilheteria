@@ -8,6 +8,7 @@ import javax.swing.*;
 
 public class Frame2 extends JFrame implements ActionListener{
 
+    int numero;
     private JTextField textoEscolha;
     private JButton botaoVoltar;
     private GridLayout grid_Layout;
@@ -60,7 +61,31 @@ public class Frame2 extends JFrame implements ActionListener{
 
     public void actionPerformed(ActionEvent e) {
 
+        if(e.getSource() == botaoFilme1)
+           numero = 1;
+        if(e.getSource() == botaoFilme2)
+            numero = 2;
+        if(e.getSource() == botaoFilme3)
+            numero = 3;
+        if(e.getSource() == botaoFilme4)
+            numero = 4;
+        if(e.getSource() == botaoFilme5)
+            numero = 5;
+        if(e.getSource() == botaoFilme6)
+            numero = 6;
+        if(e.getSource() == botaoFilme7)
+            numero = 7;
+        if(e.getSource() == botaoFilme8)
+            numero = 8;
+        if(e.getSource() == botaoFilme9)
+            numero = 9;
+        if(e.getSource() == botaoFilme10)
+            numero = 10;
 
+    }
+
+    public int getNumero(){
+        return numero;
     }
 }
 
