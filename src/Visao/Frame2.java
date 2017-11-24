@@ -23,10 +23,13 @@ public class Frame2 extends JFrame{
     private JButton botaoFilme9;
     private JButton botaoFilme10;
     private int numEscolheFilme;
+    private boolean continuar = false;
 
     ImageIcon imagemFilme1 = new ImageIcon("THOR.jpg");
     public Frame2() {
+
             super("Selecione um filme");
+
 
 
 
@@ -58,14 +61,14 @@ public class Frame2 extends JFrame{
             add(botaoFilme10);
 
             setExtendedState(JFrame.MAXIMIZED_BOTH);
-            setVisible(true);
+
 
 
             botaoFilme1.addActionListener(new ActionListener() {
 
                 public void actionPerformed(ActionEvent e) {
                     numEscolheFilme = 1;
-                    JOptionPane.showMessageDialog(null,"Voce escolheu o filme " + numEscolheFilme);
+                    JOptionPane.showMessageDialog(null,"Voce escolheu o filme " + getNumEscolheFilme());
                 }
             });
 
@@ -137,7 +140,10 @@ public class Frame2 extends JFrame{
 
                 public void actionPerformed(ActionEvent e) {
                     numEscolheFilme = 10;
-                    JOptionPane.showMessageDialog(null,"Voce escolheu o filme " + numEscolheFilme);
+                    int resposta = JOptionPane.showConfirmDialog(null,"Voce escolheu o filme " + numEscolheFilme);
+                    if(resposta == JOptionPane.YES_OPTION)
+                        getNumEscolheFilme();
+
                 }
 
             });
@@ -145,9 +151,13 @@ public class Frame2 extends JFrame{
         }
 
 
-
+public void mostrarJanela(){
+    setVisible(true);
+}
 
     public int getNumEscolheFilme(){
+
+
         return numEscolheFilme;
     }
 }

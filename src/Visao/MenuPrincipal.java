@@ -55,12 +55,13 @@ public class MenuPrincipal {
                 while(comprou == false) {
                     MenuComprarIngresso mingresso = new MenuComprarIngresso(database);//cria um menu para comprar ingresso
                     mingresso.visualizarFilmes();
+                    int numeroFilme = mingresso.getNumeroDoFilme();
                     System.out.println("digite o numero do filme: ");
-                    int numeroFilme = s.nextInt();
+
                     System.out.println("numero do filme "+ numeroFilme);
 
                     Filme filme = mingresso.selecionarFilme(numeroFilme);
-                    System.out.println("numero do filme mingresso "+ filme.getNumero());
+                    System.out.println("numero do filme "+ filme.getNumero() + "numero do filme selecionado: " + numeroFilme);
 
                     database.atualizarFilme(filme);
                     System.out.println("numero do filme atualizar "+ filme.getNumero());
