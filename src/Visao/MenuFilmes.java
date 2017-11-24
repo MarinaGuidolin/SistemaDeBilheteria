@@ -15,8 +15,10 @@ public class MenuFilmes {
         this.data = database;
     }
     //exibir JFrames com os filmes adicionados pelo administrador
+
     public JPanel visualizarFilme(){
         JPanel janelaDeFilmes = new JPanel();
+
         return janelaDeFilmes;
     }
 

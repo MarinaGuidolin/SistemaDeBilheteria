@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-public class Frame2 extends JFrame implements ActionListener{
+public class Frame2 extends JFrame{
 
     int numero;
     private JTextField textoEscolha;
@@ -22,12 +22,15 @@ public class Frame2 extends JFrame implements ActionListener{
     private JButton botaoFilme7;
     private JButton botaoFilme9;
     private JButton botaoFilme10;
+    private int numEscolheFilme;
+
+    ImageIcon imagemFilme1 = new ImageIcon("THOR.jpg");
     public Frame2() {
             super("Selecione um filme");
 
 
 
-            botaoFilme1 = new JButton("Filme 1");
+            botaoFilme1 = new JButton("Filme 1", imagemFilme1);
             botaoFilme2 = new JButton("Filme 2");
             botaoFilme3 = new JButton("Filme 3");
             botaoFilme4 = new JButton("Filme 4");
@@ -56,36 +59,96 @@ public class Frame2 extends JFrame implements ActionListener{
 
             setExtendedState(JFrame.MAXIMIZED_BOTH);
             setVisible(true);
+
+
+            botaoFilme1.addActionListener(new ActionListener() {
+
+                public void actionPerformed(ActionEvent e) {
+                    numEscolheFilme = 1;
+                    JOptionPane.showMessageDialog(null,"Voce escolheu o filme " + numEscolheFilme);
+                }
+            });
+
+            botaoFilme2.addActionListener(new ActionListener() {
+
+                public void actionPerformed(ActionEvent e) {
+                    numEscolheFilme = 2;
+                }
+
+            });
+
+            botaoFilme3.addActionListener(new ActionListener() {
+
+                public void actionPerformed(ActionEvent e) {
+                    numEscolheFilme = 3;
+                }
+
+            });
+
+            botaoFilme4.addActionListener(new ActionListener() {
+
+                public void actionPerformed(ActionEvent e) {
+                    numEscolheFilme = 4;
+                }
+
+            });
+
+            botaoFilme5.addActionListener(new ActionListener() {
+
+                public void actionPerformed(ActionEvent e) {
+                    numEscolheFilme = 5;
+                }
+
+            });
+
+            botaoFilme6.addActionListener(new ActionListener() {
+
+                public void actionPerformed(ActionEvent e) {
+                    numEscolheFilme = 6;
+                }
+
+            });
+
+            botaoFilme7.addActionListener(new ActionListener() {
+
+                public void actionPerformed(ActionEvent e) {
+                    numEscolheFilme = 7;
+                }
+
+            });
+
+            botaoFilme8.addActionListener(new ActionListener() {
+
+                public void actionPerformed(ActionEvent e) {
+                    numEscolheFilme = 8;
+                }
+
+            });
+
+            botaoFilme9.addActionListener(new ActionListener() {
+
+                public void actionPerformed(ActionEvent e) {
+                    numEscolheFilme = 9;
+                }
+
+            });
+
+            botaoFilme10.addActionListener(new ActionListener() {
+
+                public void actionPerformed(ActionEvent e) {
+                    numEscolheFilme = 10;
+                    JOptionPane.showMessageDialog(null,"Voce escolheu o filme " + numEscolheFilme);
+                }
+
+            });
+
         }
 
 
-    public void actionPerformed(ActionEvent e) {
 
-        if(e.getSource() == botaoFilme1)
-           numero = 1;
-        if(e.getSource() == botaoFilme2)
-            numero = 2;
-        if(e.getSource() == botaoFilme3)
-            numero = 3;
-        if(e.getSource() == botaoFilme4)
-            numero = 4;
-        if(e.getSource() == botaoFilme5)
-            numero = 5;
-        if(e.getSource() == botaoFilme6)
-            numero = 6;
-        if(e.getSource() == botaoFilme7)
-            numero = 7;
-        if(e.getSource() == botaoFilme8)
-            numero = 8;
-        if(e.getSource() == botaoFilme9)
-            numero = 9;
-        if(e.getSource() == botaoFilme10)
-            numero = 10;
 
-    }
-
-    public int getNumero(){
-        return numero;
+    public int getNumEscolheFilme(){
+        return numEscolheFilme;
     }
 }
 
